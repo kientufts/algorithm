@@ -18,7 +18,7 @@ public class QuickUnion extends UF{
         return root(p) == root(q);
     }
 
-    private int root(int i){
+    int root(int i){
         while (i != getComponentId(i))
             i = getComponentId(i);
         return i;
