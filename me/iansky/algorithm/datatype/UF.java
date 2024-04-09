@@ -11,10 +11,12 @@ public class UF implements UnionFind{
         initializeIds(N);
     }
 
+    @Override
     public void union(int p, int q) {
 
     }
 
+    @Override
     public boolean isConnected(int p, int q) {
         return ids[p] == ids[q];
     }

@@ -2,13 +2,25 @@ package me.iansky.algorithm.datatype;
 
 public class QuickUnion extends UF{
 
-    @Override
-    public void union(int p, int q) {
-
+    public QuickUnion(int N) {
+        super(N);
     }
 
     @Override
-    public boolean isConnected(int p, int q) {
-        return false;
+    public void union(int p, int q) {
+       int i = root(p);
+       int j = root(q);
+       setComponentId(i, j);
+    }
+
+    @Override
+    public boolean isConnected(int p, int q){
+        return root(p) == root(q);
+    }
+
+    private int root(int i){
+        while (i != getComponentId(i))
+            i = getComponentId(i);
+        return i;
     }
 }
