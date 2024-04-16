@@ -9,7 +9,19 @@ public class Point2D {
     end = b;
   }
 
-  public double length(){
-    return Math.abs(a-b);
+  public double distanceTo(Point2D that){
+    return Math.sqrt(Math.pow(start - that.getStartPoint(),2) + Math.pow(end - that.getEndPoint(),2));
+  }
+
+  public double getStartPoint(){
+    return start;
+  }
+
+  public double getEndPoint(){
+    return end;
+  }
+
+  public String toString(){
+    return "Point2D x: " + start + " y: " + end;
   }
 }
