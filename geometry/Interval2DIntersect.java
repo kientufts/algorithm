@@ -6,28 +6,30 @@ public class Interval2DIntersect {
   private static Interval2D[] intervals;
   
   public static void main(String[] args){
-    if(validateInput(args)) return;
+    if(!validateInput(args)) return;
 
     generateIntervals(args);
   }
 
-  private void generateIntevals(args){
-    int numberOfIntervals = args[0];
+  private static void generateIntervals(String[] args){
+    int numberOfIntervals = Integer.parseInt(args[0]);
     double min = Double.parseDouble(args[1]);
     double max = Double.parseDouble(args[2]);
 
-    intervals = new Intervals[N];
+    intervals = new Interval2D[numberOfIntervals];
 
-    for(int i = 0; i <= numberOfIntervals; i++){
+    for(int i = 0; i <= numberOfIntervals-1; i++){
       double upperLeftX = Math.random();
-      double upperLeftX = Math.random();
-      double height = randomInterval(min, max);
+      double upperLeftY = Math.random();
       double width = randomInterval(min, max);
+      double height = randomInterval(min, max);
+      intervals[i] = new Interval2D(upperLeftX, upperLeftY, width, height);
+      System.out.println(intervals[i].toString());
     }
   }
 
 
-  private double randomInverval(double min, double max){
+  private static double randomInterval(double min, double max){
     return min + (max - min) * Math.random(); 
   }
 

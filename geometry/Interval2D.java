@@ -8,9 +8,9 @@ public class Interval2D{
 
   }
 
-  public Interval2D(double aUpperLeftX, double aUpperLeftY, double aHeight, double aWidth){
+  public Interval2D(double aUpperLeftX, double aUpperLeftY, double aWidth, double aHeight){
     oUpperLeftX = aUpperLeftX;
-    aUpperLeftY = aUpperLeftY;
+    oUpperLeftY = aUpperLeftY;
     oWidth = aWidth;
     oHeight = aHeight;
   }
@@ -22,5 +22,10 @@ public class Interval2D{
   public boolean isInsideUnitSquare(){
     if(isEmpty()) return false;
     return oUpperLeftX >= 0 && (oUpperLeftX + oWidth) <= 1 && oUpperLeftY <= 1 && (oUpperLeftY - oHeight) >= 0;
+  }
+
+  @Override
+  public String toString(){
+    return "2D Inverval: Upper Left (X=" + oUpperLeftX + ", Y=" + oUpperLeftY + ", width=" + oWidth + ", height=" + oHeight;
   }
 }
