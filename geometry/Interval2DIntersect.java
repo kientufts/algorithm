@@ -1,3 +1,7 @@
+package geometry;
+
+import edu.princeton.cs.algs4.StdDraw;
+
 public class Interval2DIntersect {
 
   private static final double LOWER_BOUND_UNIT_SQUARE = 0.0;
@@ -25,6 +29,7 @@ public class Interval2DIntersect {
       double height = randomInterval(min, max);
       intervals[i] = new Interval2D(upperLeftX, upperLeftY, width, height);
       System.out.println(intervals[i].toString());
+      StdDraw.filledRectangle(upperLeftX, upperLeftY, width/2, height/2);
     }
   }
 

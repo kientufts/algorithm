@@ -72,7 +72,7 @@
     <configuration name="Interval2DIntersect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="geometry.Interval2DIntersect" />
       <module name="algorithm" />
-      <option name="PROGRAM_PARAMETERS" value="12 0.4 0.7" />
+      <option name="PROGRAM_PARAMETERS" value="2 0.4 0.7" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="geometry.*" />

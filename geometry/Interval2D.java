@@ -1,3 +1,5 @@
+package geometry;
+
 public class Interval2D{
   private double oUpperLeftX;
   private double oUpperLeftY;
